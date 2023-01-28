@@ -2,6 +2,7 @@
 
 :root {
     --font-color: #FFFFFF;
+    --font-color-dark: #0B0A0D;
     --background-color: #0B0A0D;
     --primary-color: #75FF77;
 }
@@ -28,6 +29,9 @@ body {
     line-height: 85px;
     letter-spacing: -0.03em;
     margin: 0 0 30px;
+    &_dark {
+        color: var(--font-color-dark);
+    }
 }
 
 .row {
@@ -192,3 +196,66 @@ body {
     }
 
 /* / news */
+
+/* subscribe */
+
+.subscribe {
+    background-color: #FFFFFF;
+    padding: 50px 0;
+    &__desc {
+        color: var(--font-color-dark);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 820px;
+    }
+    &__input {
+        color: var(--font-color-dark);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        height: 50px;
+        padding: 5px 20px;
+        transition: border-color 0.3s ease-in-out;
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        &:focus {
+            outline: none;
+            border-color: #000000;
+        }
+    }
+    &__btn {
+        color: var(--font-color-dark);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        height: 50px;
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 5px 20px;
+        justify-self: start;
+        transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        &:focus {
+            outline: none;
+        }
+        &:hover,
+        &:focus {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+/* / subscribe */
