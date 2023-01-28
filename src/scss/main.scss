@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap');
+
+:root {
+    --font-color: #FFFFFF;
+    --background-color: #0B0A0D;
+    --primary-color: #75FF77;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* header*/
+
+/* / header*/
+
+
+/* slider */
+
+.slider {
+    overflow: hidden;
+    padding: 0 70px;
+    .owl-carousel {
+        .owl-stage-outer {
+            overflow: visible;
+        }
+        .owl-nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 60px;
+            .owl-prev {
+                width: 100px;
+                height: 24px;
+                background-color: var(--font-color);
+                -webkit-mask-image: url('../images/icons/left-arr.svg');
+                mask-image: url('../images/icons/left-arr.svg');
+                &:hover {
+                    background-color: var(--primary-color);
+                }
+            }
+            .owl-next {
+                width: 100px;
+                height: 24px;
+                background-color: var(--font-color);
+                -webkit-mask-image: url('../images/icons/right-arr.svg');
+                mask-image: url('../images/icons/right-arr.svg');
+                &:hover {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+    .owl-item {
+        &.active {
+            .slider__title {
+                opacity: 1;
+            }
+        }
+    }
+    .item {
+        height: 650px;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+    &__title {
+        color: var(--font-color);
+        font-weight: 500;
+        font-size: 80px;
+        line-height: 85px;
+        letter-spacing: -0.03em;
+        position: absolute;
+        bottom: 159px;
+        left: 50px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.1s;
+    }
+}
+
+#main-slider {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* / slider */

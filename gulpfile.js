@@ -35,6 +35,7 @@ function cssMin() {
 function cssLibMin() {
     return src([
         "./node_modules/normalize.css/normalize.css",
+        "./node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
     ])
         .pipe(concat("css-libs.min.css"))
         .pipe(dest("build/libs"));
@@ -53,7 +54,8 @@ function jsMin() {
 
 function jsLibrariesMin() {
     return src([
-        "./node_modules/jquery/dist/jquery.min.js"
+        "./node_modules/jquery/dist/jquery.min.js",
+        "./node_modules/owl.carousel/dist/owl.carousel.min.js",
     ])
         .pipe(concat("js-libs.min.js"))
         .pipe(uglify())
