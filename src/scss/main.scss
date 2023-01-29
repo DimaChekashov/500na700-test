@@ -14,6 +14,7 @@
 body {
     background-color: var(--background-color);
     font-family: 'M-PLUS-1p', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -41,10 +42,19 @@ body {
 /* header */
 
 .header {
-    padding: 77px 0 82px;
+    padding: 77px 0 75px;
+    background-color: var(--background-color);
     .row {
         gap: 200px;
         align-items: center;
+    }
+    &.fixed {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 0 15px;
     }
 }
 
@@ -53,9 +63,11 @@ body {
 }
 
 .nav {
-    padding-left: 12px;
+    padding-top: 13px;
+    margin-left: 12px;
+    position: relative;
     &__list {
-        padding: 0 0 3px;
+        padding: 0;
         margin: 0;
         list-style: none;
         display: flex;
@@ -66,13 +78,59 @@ body {
             font-size: 16px;
             line-height: 1.5;
             text-decoration: none;
+            display: inline-block;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 20px;
             &:hover {
                 color: var(--primary-color);
+                border-color: var(--font-color);
+            }
+            &:hover {
+                & + .nav__inner {
+                    display: grid;
+                }
+            }
+        }
+        .active {
+            .nav__list-link {
+                border-color: var(--font-color);
             }
         }
     }
     &__inner {
         display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 142px;
+        background-color: var(--background-color);
+        padding: 75px 0 90px;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
+        &:hover {
+            display: grid;
+        }
+        &-link {
+            color: var(--font-color);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-decoration: none;
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: var(--background-color);
+            height: 100%;
+            width: 150vw;
+            left: -50vw;
+        }
     }
 }
 
