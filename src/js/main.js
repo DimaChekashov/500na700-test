@@ -49,7 +49,7 @@ function menu() {
     };
 }
 
-window.addEventListener("DOMContentLoaded", function () {
+function sliders() {
     $("#main-slider").owlCarousel({
         loop: true,
         margin: 20,
@@ -58,6 +58,17 @@ window.addEventListener("DOMContentLoaded", function () {
         dots: false,
         navText: ["", ""],
     });
+    $("#news-slider").owlCarousel({
+        loop: true,
+        margin: 20,
+        items: 1,
+        nav: false,
+        dots: false,
+    });
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+    sliders();
     accordion();
     menuList();
     menu();
