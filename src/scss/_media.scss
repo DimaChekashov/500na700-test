@@ -1,0 +1,26 @@
+@media screen and (max-width: 700px) {
+    /* footer */
+
+    .footer {
+        padding: 80px 0 167px;
+        .row {
+            gap: 41px;
+            flex-direction: column;
+        }
+        &__social {
+            justify-content: center;
+        }
+    }
+
+    /* / footer */
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+
+}
