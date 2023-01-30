@@ -2,10 +2,13 @@
   "name": "500na700-test",
   "version": "1.0.0",
   "description": "500na700-test test work",
+  "homepage": "https://fox-say.ru/500na700-test",
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn build"
   },
   "author": {
     "name": "Dmitry Chekashov",
@@ -31,6 +34,7 @@
     "sass": "^1.47.0"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "jquery": "^3.6.0",
     "maskedinput": "^3.3.11",
     "normalize.css": "^8.0.1",
