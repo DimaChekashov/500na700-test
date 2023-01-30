@@ -71,9 +71,24 @@ function sliders() {
     });
 }
 
+function inputs() {
+    const phone = document.querySelector(".phone");
+    const time = document.querySelector(".time");
+    const date = document.querySelector(".date");
+
+    const phoneMask = new Inputmask("+7 (999) 999-99-99");
+    const dateMask = new Inputmask("99.99.9999");
+    const timeMask = new Inputmask("99:99");
+
+    phoneMask.mask(phone);
+    dateMask.mask(date);
+    timeMask.mask(time);
+}
+
 window.addEventListener("DOMContentLoaded", function () {
     sliders();
     accordion();
     menuList();
     menu();
+    inputs();
 });

@@ -3746,6 +3746,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+maskedinput@^3.3.11:
+  version "3.3.11"
+  resolved "https://registry.yarnpkg.com/maskedinput/-/maskedinput-3.3.11.tgz#2ab7ed8ce69a0492c38037e55665aab58f8ea660"
+  integrity sha512-zoCFNzM1S44+9pfNcbCxk/TVrkqCxjvkpzQR6tGyVUsvnjoCUTb0w5TeZNR7PRQpnK6hZrIWqt6zJvd/fzUWmA==
+
 matchdep@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/matchdep/-/matchdep-2.0.0.tgz#c6f34834a0d8dbc3b37c27ee8bbcb27c7775582e"
