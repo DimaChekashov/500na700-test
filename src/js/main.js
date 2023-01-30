@@ -36,17 +36,21 @@ function menuList() {
 function menu() {
     const header = document.querySelector(".header");
     const body = document.querySelector("body");
-    const bodyHeight = header.offsetHeight;
+    const overlay = document.querySelector(".overlay");
 
     window.onscroll = function () {
         if (window.pageYOffset > 50) {
-            body.style.paddingTop = `${bodyHeight}px`;
+            body.classList.add("body-padding-top");
             header.classList.add("fixed");
         } else {
-            body.style.paddingTop = "0";
+            body.classList.remove("body-padding-top");
             header.classList.remove("fixed");
         }
     };
+
+    [document.querySelector(".header__btn"), overlay].forEach((elem) =>
+        elem.addEventListener("click", () => header.classList.toggle("active"))
+    );
 }
 
 function sliders() {
